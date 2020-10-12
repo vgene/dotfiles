@@ -2,14 +2,14 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/u/ziyangx/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
-[[ -s /u/ziyangx/.autojump/etc/profile.d/autojump.sh ]] && source /u/ziyangx/.autojump/etc/profile.d/autojump.sh
+[[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -99,7 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # COS597I path
 
-#export COS597I_PATH=/u/ziyangx/cos597i
+#export COS597I_PATH=$HOMEcos597i
 
 # LLVM paths
 # export LLVM_ROOT=$COS597I_PATH/llvm-3.5
@@ -142,5 +142,5 @@ export TERM=xterm-256color #TERM=screen-256color-italic
 #export CXX=g++-4.8
 
 
-#export NVM_DIR="/u/ziyangx/.nvm"
+#export NVM_DIR="$HOME.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
