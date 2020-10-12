@@ -2,8 +2,8 @@
 
 Including support for:
 
-- tmux
-- vim
+- tmux (2.7+)
+- vim (8.0+)
 - zsh (oh-my-zsh, autojump)
 - term profile
 
