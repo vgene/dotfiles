@@ -1,5 +1,6 @@
 syntax on 
 color dracula
+set textwidth=0
 set t_Co=256
 set term=screen-256color-italic
 set nocompatible 
@@ -32,6 +33,7 @@ augroup filetype
 augroup END
 
 call plug#begin('~/.vim/plugged')
+Plug 'rust-lang/rust.vim'
 Plug 'vim-airline/vim-airline'
 call plug#end()
 

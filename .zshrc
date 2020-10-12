@@ -136,8 +136,11 @@ export LIBERTY_BIB=$HOME/pubs/bib/
 export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export TERM=screen-256color-italic
+export TERM=xterm-256color #TERM=screen-256color-italic
 #export TERM=xterm-256color-italic
 #export CC=gcc-4.8
 #export CXX=g++-4.8
 
+
+#export NVM_DIR="/u/ziyangx/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
