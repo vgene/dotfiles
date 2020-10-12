@@ -8,7 +8,6 @@ cp .zshrc ~/
 # Set up tmux
 cp tmux-256color.terminfo ~/
 cp -r .tmux ~/
-cp .terminfo ~/
 cp .tmux.conf.local ~/
 
 # Copy vim settings
