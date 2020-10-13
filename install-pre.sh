@@ -10,6 +10,8 @@ mv .vim* $old_dots
 mv .tmux* $old_dots
 mv .bash $old_dots
 mv .zshrc $old_dots
+mv .terminfo $old_dots
+
 
 # Install Autojump: created .autojump
 echo "Installing Autojump"
@@ -24,6 +26,10 @@ echo "Installing .tmux"
 cd ~
 git clone https://github.com/gpakosz/.tmux.git
 ln -s -f .tmux/.tmux.conf
+
+# Install term info
+curl -LO https://invisible-island.net/datafiles/current/terminfo.src.gz && gunzip terminfo.src.gz
+tic -xe tmux-256color terminfo.src
 
 # Install Oh-my-zsh
 echo "Installing Oh-my-zsh"
