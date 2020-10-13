@@ -6,7 +6,7 @@ cd ~
 now=$(date +%Y%m%d%H%M)
 old_dots=".old_dots_$now"
 mkdir $old_dots
-mv .vim* $old_dots
+mv .vimrc $old_dots
 mv .tmux* $old_dots
 mv .bash $old_dots
 mv .zshrc $old_dots
