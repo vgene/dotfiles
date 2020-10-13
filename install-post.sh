@@ -11,4 +11,4 @@ cp .vimrc ~/
 vim +PlugInstall +qall
 
 cd ~/.vim/plugged/youcompleteme
-python3 install.py --clang-completer --rust-completer --java-completer
+python3 install.py --clang-completer --rust-completer 

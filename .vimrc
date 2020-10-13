@@ -2,11 +2,13 @@
 "let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
 "set termguicolors
 
+" For some reason, this is needed for my mac + iTerm2 to get italics working
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+
 syntax on 
 color dracula
 set textwidth=0
-set t_Co=256
-set term=xterm-256color
 set nocompatible 
 set autoindent 
 set number 
