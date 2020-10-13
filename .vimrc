@@ -1,6 +1,6 @@
-let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
-set termguicolors
+"let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+"let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+"set termguicolors
 
 syntax on 
 color dracula
@@ -39,5 +39,10 @@ augroup END
 call plug#begin('~/.vim/plugged')
 Plug 'rust-lang/rust.vim'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'valloric/youcompleteme'
+Plug 'tpope/vim-fugitive'
+Plug 'rhysd/vim-llvm'
+Plug 'majutsushi/tagbar'
 call plug#end()
 
