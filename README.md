@@ -1,11 +1,19 @@
 # My Dotfiles
 
-Including support for:
+Including my cutomized setting for tmux, vim, and zsh.
+
+## Requirements
 
 - tmux (2.7+)
 - vim (8.0+)
 - zsh (oh-my-zsh, autojump)
 - term profile
+
+## Will Install
+
+- autojump
+- npm and node.js
+- clangd
 
 ## Installation
 

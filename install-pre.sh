@@ -30,6 +30,7 @@ ln -s -f .tmux/.tmux.conf
 # Install term info
 curl -LO https://invisible-island.net/datafiles/current/terminfo.src.gz && gunzip terminfo.src.gz
 tic -xe tmux-256color terminfo.src
+rm terminfo.src
 
 # Install Oh-my-zsh
 echo "Installing Oh-my-zsh"
