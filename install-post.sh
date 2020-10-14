@@ -11,9 +11,18 @@ source ~/.zshrc
 nvm install --lts
 
 # Install clangd
-wget https://github.com/clangd/clangd/releases/download/10.0.0/clangd-linux-10.0.0.zip
-unzip clangd-linux-10.0.0.zip
-rm clangd-linux-10.0.0.zip
+if [ "$(uname)" = "Darwin" ]; then
+    download=mac
+elif [ "$(expr substr $(uname -s) 1 5)" = "Linux" ]; then
+    download=linux
+else
+    echo "not supported"
+    exit
+fi 
+
+wget https://github.com/clangd/clangd/releases/download/10.0.0/clangd-$download-10.0.0.zip
+unzip clangd-$download-10.0.0.zip
+rm clangd-$download-10.0.0.zip
 pushd clangd_10.0.0
 mkdir -p ~/.local/bin
 cp -r bin/* ~/.local/bin
