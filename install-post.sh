@@ -6,7 +6,7 @@ cp .zshrc ~/
 cp .tmux.conf.local ~/
 
 # Install Nodejs for coc
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | zsh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | zsh
 source ~/.zshrc
 nvm install --lts
 
@@ -20,16 +20,17 @@ else
     exit
 fi 
 
-wget https://github.com/clangd/clangd/releases/download/10.0.0/clangd-$download-10.0.0.zip
-unzip clangd-$download-10.0.0.zip
-rm clangd-$download-10.0.0.zip
-pushd clangd_10.0.0
+VERSION="13.0.0"
+wget https://github.com/clangd/clangd/releases/download/$VERSION/clangd-$download-$VERSION.zip
+unzip clangd-$download-$VERSION.zip
+rm clangd-$download-$VERSION.zip
+pushd clangd_$VERSION
 mkdir -p ~/.local/bin
 cp -r bin/* ~/.local/bin
 mkdir -p ~/.local/cp
 cp -r lib/* ~/.local/lib
 popd
-rm -rf clangd_10.0.0
+rm -rf clangd_$VERSION
 
 
 # Copy vim settings
@@ -37,7 +38,3 @@ cp -r .vim ~/
 cp .vimrc ~/
 vim +PlugInstall +qall
 vim +"CocInstall coc-clangd" +qall
-
-# # Install ycm
-# cd ~/.vim/plugged/youcompleteme
-# python3 install.py --clang-completer --rust-completer 

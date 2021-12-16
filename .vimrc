@@ -43,10 +43,12 @@ Plug 'rust-lang/rust.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "Plug 'valloric/youcompleteme'
+Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'rhysd/vim-llvm'
 Plug 'majutsushi/tagbar'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'andymass/vim-matchup'
 call plug#end()
 
 " TextEdit might fail if hidden is not set.
@@ -198,3 +200,8 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+try
+    nmap <silent> ]c :call CocAction('diagnosticNext')<cr>
+    nmap <silent> [c :call CocAction('diagnosticPrevious')<cr>
+endtry
